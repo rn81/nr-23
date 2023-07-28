@@ -1,0 +1,49 @@
+<div class="displayTable">
+  <div class="displayTableCell">
+    <div class="authBlock">
+      <h3>Entrar</h3>
+      <div class="formGroup">
+        <input
+          type="text"
+          class="formControl"
+          placeholder="Nome de usuário
+          "
+          #userName
+          required
+        />
+      </div>
+
+      <div class="formGroup">
+        <input
+          type="password"
+          class="formControl"
+          placeholder="Senha"
+          #userPassword
+          required
+        />
+      </div>
+
+      <!-- Calling SignIn Api from AuthService -->
+      <div class="formGroup">
+        <input
+          type="button"
+          class="btn btnPrimary"
+          value="Conecte-se"
+          (click)="authService.SignIn(userName.value, userPassword.value)"
+        />
+      </div>
+
+      <div class="formGroup">
+        <span class="or"><span class="orInner">Ou</span></span>
+      </div>
+
+      <div class="forgotPassword">
+        <span routerLink="/forgot-password">Esqueceu sua senha?</span>
+      </div>
+    </div>
+
+    <div class="redirectToLogin">
+      <span>Não tem uma conta? <span class="redirect" routerLink="/register-user">Inscrever-se</span></span>
+    </div>
+  </div>
+</div>

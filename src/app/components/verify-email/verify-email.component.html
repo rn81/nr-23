@@ -1,0 +1,37 @@
+<div class="displayTable">
+  <div class="displayTableCell">
+    <div class="authBlock">
+      <h3>Obrigado por se registrar!</h3>
+
+      <div class="formGroup" *ngIf="authService.userData as user">
+        <p class="text-center">
+          Enviamos um e-mail de confirmação para <strong>{{ user.email }}</strong>.
+        </p>
+        <p class="text-center">
+          Verifique seu e-mail e clique no link para verificar seu e-mail
+          endereço.
+        </p>
+      </div>
+
+      <!-- Calling SendVerificationMail() method using authService Api -->
+      <div class="formGroup">
+        <button
+          type="button"
+          class="btn btnPrimary"
+          (click)="authService.SendVerificationMail()"
+        >
+          <i class="fas fa-redo-alt"></i>
+          Reenviar e-mail de verificação
+        </button>
+      </div>
+    </div>
+
+    <div class="redirectToLogin">
+      <span
+        >Voltar para?<span class="redirect" routerLink="/sign-in">
+          Entrar</span
+        ></span
+      >
+    </div>
+  </div>
+</div>
