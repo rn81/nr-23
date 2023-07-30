@@ -9,6 +9,7 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 // route guard
 import { AuthGuard } from './shared/guard/auth.guard';
 import { SplashComponent } from './components/splash/splash.component';
+import { NormasComponent } from './components/normas/normas.component';
 
 const routes: Routes = [
   //{ path: '', redirectTo: '/sign-in', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'verify-email-address', component: VerifyEmailComponent },
   { path: 'splash', component: SplashComponent},
+  { path: 'normas', component: NormasComponent},
 ];
 
 @NgModule({
