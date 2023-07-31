@@ -1,55 +1,51 @@
 <!-- Top navigation -->
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-sm-3 col-md-2 mr-0">
-    <img class="brand-logo" src="assets/logo-positronx.png">
-  </a>
+  <img class="brand-logo" src="assets/logo-positronx.png">
 </nav>
 
-<!-- Sidebar navigation -->
-<div class="container-fluid">
-  <div class="row">
+<div class="displayone">
+  <div class="displaytwo">
+    <div class="authtree">
 
-    <nav class="col-md-2 d-md-block bg-light sidebar">
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active">
-              <i class="fas fa-user"></i>Perfil de usuário</a>
-          </li>
-          <!-- Calling SignOut() Api from AuthService -->
-          <li class="nav-item">
-            <a class="nav-link" (click)="authService.SignOut()">
-              <i class="fas fa-sign-out-alt"></i>Sair</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <!-- Main content -->
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div class="inner-adjust">
 
-    <!-- Main content -->
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="inner-adjust">
+          <h1 class="hd">Confirmação:</h1>
+          <br>
 
-        <div class="pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Perfil de usuário</h1>
-        </div>
-        <!-- Show user data when logged in -->
-        <div class="row" *ngIf="authService.userData as user">
-          <div class="col-md-12">
-            <div class="media">
-              <img class="align-self-start mr-5 img-thumbnail rounded-circle"
-                src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}" alt="{{user.displayName}}">
-              <div class="media-body">
-                <h1>Olá: <strong>{{(user.displayName) ? user.displayName : 'usuário (a)'}}</strong></h1>
-                <p>ID do usuário: <strong>{{user.uid}}</strong></p>
-                <p>E-mail: <strong>{{user.email}}</strong></p>
-                <p>E-mail Verificado: <strong>{{user.emailVerified}}</strong></p>
+          <h1 class="h2">Autenticação efetuada!</h1>
+          <br>
+
+          <!-- Show user data when logged in -->
+          <div class="row" *ngIf="authService.userData as user">
+            <div class="col-md-12">
+              <div class="media">
+
+                <img class="align-self-start mr-5 img-thumbnail rounded-circle"
+                  src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}" alt="{{user.displayName}}">
+
+                <div class="media-body">
+                  <h1>Olá: <strong>{{(user.displayName) ? user.displayName : 'usuário (a)'}}</strong></h1>
+                  <p>ID do usuário: <strong>{{user.uid}}</strong></p>
+                  <p>E-mail: <strong>{{user.email}}</strong></p>
+                  <p>E-mail Verificado: <strong>{{user.emailVerified}}</strong></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-      </div>
-    </main>
+        </div>
+      </main>
+
+    </div>
+    <!-- Calling SignOut() Api from AuthService -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <ion-button class="fas fa-sign-out-alt" (click)="authService.SignOut()"> Sair</ion-button>
 
   </div>
 </div>

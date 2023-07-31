@@ -1,0 +1,35 @@
+
+.displayone {
+    display: table;
+    width: 100%;
+    height: 100%;
+    background-size: auto;
+    color: antiquewhite;
+    background: url('../dashboard/dashboard.png') no-repeat center center / cover !important;
+}
+
+.displaytwo {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hd{
+    max-width: 767px;
+    max-height: 767px;
+    text-align: center;
+}
+
+.authtree{ 
+    max-width: 767px;
+    max-height: 767px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}

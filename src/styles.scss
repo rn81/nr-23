@@ -14,6 +14,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Poppins", sans-serif;
+
 }
 
 .feather {
@@ -39,6 +40,7 @@ h6 {
 
 .media-body h1 strong {
   font-weight: 600;
+  text-align: center;
 }
 
 .media-body p {
@@ -49,6 +51,7 @@ h6 {
 .media-body p strong {
   margin-bottom: 10px;
   font-weight: 600;
+  text-align: center;
 }
 
 .px-logo {
@@ -75,7 +78,8 @@ h6 {
   vertical-align: middle;
   width: 100%;
   height: 100%;
-}
+  text-align: center;
+ }
 
 h3 {
   text-align: center;
@@ -312,6 +316,7 @@ a:not([href]):not([tabindex]):hover {
   margin-left: 15px;
   position: relative;
   top: -1px;
+  text-align: center;
 }
 
 /* * Navbar */
@@ -362,6 +367,9 @@ i {
 
 .inner-adjust {
   padding: 0 20px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 .action-block {
@@ -484,11 +492,16 @@ label {
 }
 
 .navbar-dark .navbar-brand {
-  margin-left: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+
 }
 
 .custom-text strong {
   color: #3a3a3a;
+  text-align: center;
 }
 
 .mb-3,
@@ -562,6 +575,7 @@ body .table thead th {
   .sidebar {
     position: static;
     padding: 40px 0 10px;
+    width: auto;
     height: auto;
   }
 
@@ -586,6 +600,7 @@ body .table thead th {
     max-width: 175px;
     margin: 0 auto;
     display: block;
+    margin-left: 130px;
   }
 
   .dasboard-text {
@@ -616,6 +631,7 @@ body .table thead th {
   .h2,
   h2 {
     font-size: 1.4rem;
+
   }
 
   .custom-text {
@@ -646,7 +662,8 @@ body .table thead th {
   }
 
   .media {
-    display: block;
+    display: auto;
+    text-align: center;
   }
 
   .rounded-circle {
@@ -658,6 +675,7 @@ body .table thead th {
   b,
   strong {
     display: block;
+    text-align: center;
   }
 
   .displayTable {
@@ -666,6 +684,7 @@ body .table thead th {
 
   .authBlock {
     box-shadow: none;
+    text-align: center;
   }
 
   .px-logo {

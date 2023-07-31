@@ -42,7 +42,7 @@ export class AuthService {
         this.SetUserData(result.user);
         this.afAuth.authState.subscribe((user) => {
           if (user) {
-            this.router.navigate(['normas']);
+            this.router.navigate(['dashboard']);
           }
         });
       })
@@ -112,11 +112,10 @@ export class AuthService {
     });
   }
 
-  // Sign out
   SignOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['normas']);
     });
   }
 }

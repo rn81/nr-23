@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../shared/services/auth.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -8,7 +8,15 @@ import { AuthService } from '../../shared/services/auth.service';
 })
 
 export class DashboardComponent implements OnInit {
-  constructor(public authService: AuthService) {}
+  router: any;
 
-  ngOnInit(): void {}
+    constructor (public authService: AuthService ) {}
+ 
+  ngOnInit() {
+    setTimeout(()=>{
+      this.router.navigateByUrl('normas');
+    },5000);
+  }
 }
+
+
