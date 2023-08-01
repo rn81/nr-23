@@ -8,9 +8,8 @@ import { Router } from '@angular/router';
 })
 
 export class DashboardComponent implements OnInit {
-  router: any;
 
-    constructor (public authService: AuthService ) {}
+    constructor (public authService: AuthService, private router : Router ) {}
  
   ngOnInit() {
     setTimeout(()=>{
