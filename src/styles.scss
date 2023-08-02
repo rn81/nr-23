@@ -31,6 +31,7 @@ h5,
 h6 {
   font-weight: 600;
   text-align: center;
+  font-size: medium;
 }
 
 .media-body h1 {
@@ -40,7 +41,6 @@ h6 {
 
 .media-body h1 strong {
   font-weight: 600;
-  text-align: center;
 }
 
 .media-body p {
@@ -51,7 +51,6 @@ h6 {
 .media-body p strong {
   margin-bottom: 10px;
   font-weight: 600;
-  text-align: center;
 }
 
 .px-logo {
@@ -89,18 +88,18 @@ h3 {
 
 .authBlock {
   margin: 0 auto;
-  max-width: 400px;
+  //max-width: 700px;
   background: white;
-  padding: 30px 40px 10px;
+    
+  padding: 70px 40px 10px;
   overflow: hidden;
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
 
   border-radius: 10px;
-  opacity: 0.9;
+  opacity: 0.8;
   width: 80%;
-  text-align: center;
-  background-color: white;
+  background-color: white; 
 }
 
 label {
@@ -303,7 +302,7 @@ a:not([href]):not([tabindex]):hover {
 
 /* * Content */
 [role="main"] {
-  padding-top: 48px;
+  padding-top: 18px;
   
 }
 
@@ -366,10 +365,11 @@ i {
 }
 
 .inner-adjust {
-  padding: 0 20px;
+  padding: 0 -10px;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  margin-top: -50px;
 }
 
 .action-block {
@@ -584,7 +584,7 @@ body .table thead th {
   }
 
   .inner-adjust {
-    padding: 0;
+    padding: 0 20px;
   }
 
   ul.nav.flex-column {
@@ -663,7 +663,7 @@ body .table thead th {
 
   .media {
     display: auto;
-    text-align: center;
+    margin-left: -25px;
   }
 
   .rounded-circle {
@@ -684,7 +684,9 @@ body .table thead th {
 
   .authBlock {
     box-shadow: none;
-    text-align: center;
+    display: auto;
+    max-width: 400px;
+    max-height: 400px;
   }
 
   .px-logo {
