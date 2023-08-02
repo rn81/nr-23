@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Platform } from '@ionic/angular';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 @Component({
@@ -9,6 +10,7 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
   title = 'angularfiebase-authentication';
   constructor(private router: Router, private platform: Platform) {
     this.initializeApp();
@@ -20,4 +22,3 @@ export class AppComponent {
     });
   }
 }
-
