@@ -92,6 +92,7 @@ h3 {
   background: white;
     
   padding: 70px 40px 10px;
+  padding-bottom: 400px;
   overflow: hidden;
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.04);
@@ -222,7 +223,7 @@ input:-moz-placeholder {
 }
 
 .forgotPassword span {
-  color: #4dd5fe;
+  color: #000000;
   font-size: 15px bold;
   font-weight: 400;
   cursor: pointer;
