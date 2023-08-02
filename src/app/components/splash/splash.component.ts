@@ -15,5 +15,4 @@ export class SplashComponent implements OnInit {
       this.router.navigateByUrl('sign-in');
     },5000);
   }
-
 }
