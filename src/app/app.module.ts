@@ -12,7 +12,6 @@ import { environment } from '../environments/environment';
 import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
-
 // components
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
@@ -26,7 +25,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 // service
 import { AuthService } from './shared/services/auth.service';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+
+// Auth service
+import { AuthenticationService} from "./shared/services/authentication.service";
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
     AppRoutingModule,    
   ],
   
-  providers: [AuthService, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
+  providers: [AuthService, AuthenticationService, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],
 
 })
