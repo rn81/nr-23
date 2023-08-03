@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'verify-email-address', component: VerifyEmailComponent },
   { path: 'splash', component: SplashComponent},
   { path: 'normas', component: NormasComponent},
+  
 ];
 
 @NgModule({
