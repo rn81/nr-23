@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Platform } from '@ionic/angular';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-
 
 @Component({
   selector: 'app-root',

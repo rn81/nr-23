@@ -9,10 +9,6 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 
-import { RouteReuseStrategy } from '@angular/router';
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
-
 // components
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
@@ -27,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
 // service
 import { AuthService } from './shared/services/auth.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +35,6 @@ import { AuthService } from './shared/services/auth.service';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
@@ -46,9 +42,8 @@ import { AuthService } from './shared/services/auth.service';
     AngularFireDatabaseModule,
     AppRoutingModule,
   ],
-  providers: [AuthService, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
+  providers: [AuthService],
   bootstrap: [AppComponent],
-
 })
 
 export class AppModule {}
