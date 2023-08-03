@@ -18,7 +18,8 @@
       </div>
 
       <div class="formGroup">
-        <button type="button" class="btn googleBtn" (click)="authenticationService.GoogleAuth()">
+        <button type="button" class="btn googleBtn" style="background-color: red;"
+          (click)="authenticationService.GoogleAuth()">
           <i class="fab fa-google-plus-g"></i>
           Entrar com Google
         </button>
@@ -28,8 +29,9 @@
         <span class="or"><span class="orInner">Ou</span></span>
       </div>
 
-      <div class="forgotPassword">
-        <span routerLink="/forgot-password">Esqueceu sua senha?</span>
+      <div class="formGroup">
+        <button type="button" class="btn btnPrimary" style="background-color: blue;"
+          routerLink="/forgot-password">Esqueceu sua senha?</button>
       </div>
 
     </div>
