@@ -7,18 +7,24 @@ import {
 } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  auth: any;
+  static SignUp() {
+    throw new Error('Method not implemented.');
+  }
   userData: any; // Save logged in user data
 
   constructor(
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public router: Router,
-    public ngZone: NgZone // NgZone service to remove outside scope warning
+    public ngZone: NgZone, // NgZone service to remove outside scope warning
+    private afDB: AngularFireDatabaseModule,
   ) {
     /* Saving user data in localstorage when 
     logged in and setting up null when logged out */
@@ -64,6 +70,7 @@ export class AuthService {
       .catch((error) => {
         window.alert(error.message);
       });
+      
   }
 
   // Send email verfificaiton when new user sign up
