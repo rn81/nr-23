@@ -16,7 +16,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      const newLocal = 'normas';
+      const newLocal = 'nrs';
       this.router.navigateByUrl(newLocal);
     });
   }
