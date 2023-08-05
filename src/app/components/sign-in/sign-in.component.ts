@@ -3,9 +3,6 @@ import { AuthService } from '../../shared/services/auth.service';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 
 import { AuthenticationService } from 'src/app/shared/services/authentication.service';
-
-
-
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -20,6 +17,7 @@ export class SignInComponent implements OnInit {
     ) {}
 
   ngOnInit() {}
+  
 }
 
 
