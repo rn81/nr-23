@@ -58,7 +58,7 @@ import { AuthenticationService} from "./shared/services/authentication.service";
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebase,'Master'),
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
