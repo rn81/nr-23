@@ -18,6 +18,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.router.navigateByUrl('normas');
-    }, 4000);
+    }, 5000);
   }
 }
