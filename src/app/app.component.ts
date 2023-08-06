@@ -16,7 +16,7 @@ export class AppComponent {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      const newLocal = 'nr06';
+      const newLocal = 'nr07';
       this.router.navigateByUrl(newLocal);
     });
   }
