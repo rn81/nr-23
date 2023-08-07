@@ -19,8 +19,6 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
-import { NormasComponent } from './components/normas/normas.component';
-
 import { SplashComponent } from './components/splash/splash.component';
 
 import { NrsComponent } from './components/nrs/nrs.component';
@@ -28,6 +26,10 @@ import { NrsComponent } from './components/nrs/nrs.component';
 import { Nr01Component } from './components/nrs/nr01/nr01.component';
 import { Nr02Component } from './components/nrs/nr02/nr02.component';
 import { Nr03Component } from './components/nrs/nr03/nr03.component';
+import { Nr04Component } from './components/nrs/nr04/nr04.component';
+import { Nr05Component } from './components/nrs/nr05/nr05.component';
+import { Nr06Component } from './components/nrs/nr06/nr06.component';
+import { Nr07Component } from './components/nrs/nr07/nr07.component';
 
 
 // routing
@@ -39,6 +41,7 @@ import { AuthService } from './shared/services/auth.service';
 // Auth service
 import { AuthenticationService} from "./shared/services/authentication.service";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,11 +51,14 @@ import { AuthenticationService} from "./shared/services/authentication.service";
     ForgotPasswordComponent,
     VerifyEmailComponent,
     SplashComponent,
-    NormasComponent,
     NrsComponent,
     Nr01Component,  
     Nr02Component,  
     Nr03Component,     
+    Nr04Component,
+    Nr05Component,
+    Nr06Component,
+    Nr07Component,    
   ],
 
   imports: [

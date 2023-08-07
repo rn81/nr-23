@@ -8,11 +8,13 @@ import {
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { FacebookAuthProvider } from 'firebase/auth';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  
   auth: any;
   static SignUp() {
     throw new Error('Method not implemented.');
@@ -38,6 +40,23 @@ export class AuthService {
         JSON.parse(localStorage.getItem('user')!);
       }
     });
+  }
+
+  // Sign in with Facebook
+  FacebookAuth() {
+    return this.AuthLogin(new FacebookAuthProvider());
+  }
+
+  // Auth logic to run auth providers
+  AuthLogin(provider) {
+    return this.afAuth
+      .signInWithPopup(provider)
+      .then((result) => {
+        console.log('Você foi logado com sucesso!');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   // Sign in with email/password

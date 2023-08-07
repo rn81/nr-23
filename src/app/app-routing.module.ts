@@ -8,8 +8,6 @@ import { VerifyEmailComponent } from './components/verify-email/verify-email.com
 
 import { SplashComponent } from './components/splash/splash.component';
 
-import { NormasComponent } from './components/normas/normas.component';
-
 import { NrsComponent } from './components/nrs/nrs.component';
 //nr's//
 import { Nr01Component } from './components/nrs/nr01/nr01.component';
@@ -36,8 +34,6 @@ import { Nr20Component } from './components/nrs/nr20/nr20.component';
 // route guard
 import { AuthGuard } from './shared/guard/auth.guard';
 
-
-
 const routes: Routes = [
   //{ path: '', redirectTo: '/sign-in', pathMatch: 'full' },
   { path: 'sign-in', component: SignInComponent },
@@ -48,9 +44,7 @@ const routes: Routes = [
 
   { path: 'splash', component: SplashComponent},
 
-  { path: 'normas', component: NormasComponent},
-
-  { path: 'nrs', component: NrsComponent},
+   { path: 'nrs', component: NrsComponent},
 
   { path: 'nr01', component: Nr01Component},
   { path: 'nr02', component: Nr02Component},

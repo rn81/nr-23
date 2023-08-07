@@ -18,7 +18,8 @@
       </div>
 
       <div class="formGroup">
-        <button type="button" class="btn googleBtn" style="background-color: red;"
+        <button type="button" 
+        class="btn googleBtn" style="background-color: green;"
           (click)="authenticationService.GoogleAuth()">
           <i class="fab fa-google-plus-g"></i>
           Entrar com Google
@@ -26,11 +27,23 @@
       </div>
 
       <div class="formGroup">
+        <div class="formGroup">
+          <button type="button" 
+          class="btn facbebook"
+          style="background-color: blue; color: white;"
+          (click)="authService.FacebookAuth()">
+          <i class="fab fa-facebook-f" style="color: white;"></i>
+            Entrar com Facebook
+          </button>
+        </div>
+      </div>
+
+      <div class="formGroup">
         <span class="or"><span class="orInner">Ou</span></span>
       </div>
 
       <div class="formGroup">
-        <button type="button" class="btn btnPrimary" style="background-color: blue;"
+        <button type="button" class="btn btnPrimary" style="background-color: red;"
           routerLink="/forgot-password">Esqueceu sua senha?</button>
       </div>
 
