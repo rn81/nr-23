@@ -30,7 +30,7 @@
     background-color: white; 
   }
 
-ion-searchbar.custom {
+.custom {
     --background: #000000;
     --color: #fff;
     --placeholder-color: #fff;
@@ -40,4 +40,6 @@ ion-searchbar.custom {
     padding-inline-start: 0%;
     padding: auto;
     padding-inline-end: 0%;
+    text-align: center;
+    color: #fff;
   }
