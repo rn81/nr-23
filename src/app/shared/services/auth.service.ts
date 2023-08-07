@@ -88,8 +88,7 @@ export class AuthService {
       })
       .catch((error) => {
         window.alert(error.message);
-      });
-      
+      });      
   }
 
   // Send email verfificaiton when new user sign up
