@@ -53,9 +53,9 @@ export class AuthService {
           this.router.navigate(['dashboard']);
         });
       })
-      .catch((error) => {
-        window.alert(error.message);
-      });
+      // .catch((error) => {
+      //   window.alert(error.message);
+      // });
   }
 
   // Sign in with email/password

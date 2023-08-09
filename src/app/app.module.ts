@@ -12,13 +12,6 @@ import { environment } from '../environments/environment';
 import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
-import { ReactiveFormsModule } from '@angular/forms';
-import {
-  FacebookLoginProvider,
-  SocialLoginModule,
-  SocialAuthServiceConfig,
-} from '@abacritt/angularx-social-login';
-
 // components
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
@@ -38,7 +31,6 @@ import { Nr05Component } from './components/nrs/nr05/nr05.component';
 import { Nr06Component } from './components/nrs/nr06/nr06.component';
 import { Nr07Component } from './components/nrs/nr07/nr07.component';
 
-
 // routing
 import { AppRoutingModule } from './app-routing.module';
 
@@ -47,7 +39,6 @@ import { AuthService } from './shared/services/auth.service';
 
 // Auth service
 import { AuthenticationService} from "./shared/services/authentication.service";
-
 
 @NgModule({
   declarations: [
@@ -77,29 +68,9 @@ import { AuthenticationService} from "./shared/services/authentication.service";
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     AppRoutingModule,    
-    BrowserModule,
-    ReactiveFormsModule,
-    SocialLoginModule,
   ],
   
-  providers: [
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        providers: [
-          {
-            id: FacebookLoginProvider.PROVIDER_ID,
-            provider: new FacebookLoginProvider('Facebook-App-ID-Goes-Here'),
-          },
-        ],
-      } as SocialAuthServiceConfig,
-    },
-
-    AuthService, AuthenticationService, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-
-  ],
-
+  providers: [AuthService, AuthenticationService, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],
 
 })
