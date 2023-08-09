@@ -12,6 +12,13 @@ import { environment } from '../environments/environment';
 import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import {
+  FacebookLoginProvider,
+  SocialLoginModule,
+  SocialAuthServiceConfig,
+} from '@abacritt/angularx-social-login';
+
 // components
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
@@ -70,9 +77,29 @@ import { AuthenticationService} from "./shared/services/authentication.service";
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     AppRoutingModule,    
+    BrowserModule,
+    ReactiveFormsModule,
+    SocialLoginModule,
   ],
   
-  providers: [AuthService, AuthenticationService, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('Facebook-App-ID-Goes-Here'),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+
+    AuthService, AuthenticationService, {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+
+  ],
+
   bootstrap: [AppComponent],
 
 })
