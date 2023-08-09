@@ -1,10 +1,7 @@
 import { Injectable, NgZone } from '@angular/core';
 import { User } from '../services/user';
 
-import {
-  AngularFirestore,
-  AngularFirestoreDocument,
-} from '@angular/fire/compat/firestore';
+import { AngularFirestore, AngularFirestoreDocument, } from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -14,7 +11,7 @@ import { FacebookAuthProvider } from 'firebase/auth';
   providedIn: 'root',
 })
 export class AuthService {
-  
+
   auth: any;
   static SignUp() {
     throw new Error('Method not implemented.');
@@ -52,10 +49,12 @@ export class AuthService {
     return this.afAuth
       .signInWithPopup(provider)
       .then((result) => {
-        console.log('Você foi logado com sucesso!');
+        this.ngZone.run(() => {
+          this.router.navigate(['dashboard']);
+        });
       })
       .catch((error) => {
-        console.log(error);
+        window.alert(error.message);
       });
   }
 
@@ -89,7 +88,7 @@ export class AuthService {
       .catch((error) => {
         window.alert(error.message);
       });
-      
+
   }
 
   // Send email verfificaiton when new user sign up
