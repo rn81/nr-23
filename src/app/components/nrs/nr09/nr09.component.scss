@@ -1,0 +1,29 @@
+ion-card-header{    
+    background: #000000 url('./09.jpg') no-repeat center center / cover !important;
+}
+
+ion-card-title{
+    text-align: left;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+ion-card-subtitle{
+    text-align: left;
+    font-size: 1rem;
+    color: white;
+}
+
+ion-toolbar {
+  display: block;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  pointer-events: auto;
+  text-align: center;
+  background-color: black;
+  color: black;
+}
+
