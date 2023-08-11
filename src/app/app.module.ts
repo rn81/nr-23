@@ -20,6 +20,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 import { SplashComponent } from './components/splash/splash.component';
+import { Splash2Component } from './components/splash2/splash2.component';
 
 import { NrsComponent } from './components/nrs/nrs.component';
 
@@ -43,6 +44,7 @@ import { AuthenticationService} from "./shared/services/authentication.service";
     ForgotPasswordComponent,
     VerifyEmailComponent,
     SplashComponent,
+    Splash2Component,
     NrsComponent,
   ],
 

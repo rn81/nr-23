@@ -7,6 +7,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 import { SplashComponent } from './components/splash/splash.component';
+import { Splash2Component } from './components/splash2/splash2.component';
 
 import { NrsComponent } from './components/nrs/nrs.component';
 //nr's//
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'verify-email-address', component: VerifyEmailComponent },
 
   { path: 'splash', component: SplashComponent},
+  { path: 'splash2', component: Splash2Component},
 
    { path: 'nrs', component: NrsComponent},
 
