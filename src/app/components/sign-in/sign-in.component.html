@@ -1,31 +1,5 @@
-<ion-menu contentId="main-content">
-  <ion-header >
-    <ion-toolbar>
-      <ion-title>Menu Content</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">This is the menu content.</ion-content>
-</ion-menu>
-<div class="ion-page" id="main-content">
-  
-    
-      
-    
-    
-  
-  <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
-</div>
-
 <div class="displayTable">
-
-  <ion-buttons slot="start">
-    <ion-menu-button></ion-menu-button>
-  </ion-buttons>
-
   <div class="displayTableCell">
-
-
-
     <div class="authBlock">
       <h3>Entrar</h3>
       <div class="formGroup">
@@ -42,7 +16,8 @@
         <input type="button" 
         class="btn btnPrimary" 
         value="Conecte-se"
-        (click)="authService.SignIn(userName.value, userPassword.value)" />        
+        (click)="authService.SignIn(userName.value, userPassword.value)" />
+        
       </div>
 
       <div class="formGroup">
